@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1099344652345",
+    "project_id": "react-native-authenticat-577f0",
+    "storage_bucket": "react-native-authenticat-577f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1099344652345:android:88ff7d8baaee5293a4c5e8",
+        "android_client_info": {
+          "package_name": "com.loginapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1099344652345-hsdfttl4jp59fic8i0ioh2p6t9boj1ik.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.loginapp",
+            "certificate_hash": "64df48fe99a016b54017aff202df8f3b7cdf5b12"
+          }
+        },
+        {
+          "client_id": "1099344652345-snippjej3e7ebuoso79vq4toj4dbj1hm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD86453g52W4mV5RcQI_bCeE50f-9pXI4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1099344652345-snippjej3e7ebuoso79vq4toj4dbj1hm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
