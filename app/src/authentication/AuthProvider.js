@@ -52,7 +52,7 @@ export const AuthProvider = ({children}, {navigation}) => {
                     try {
                         await auth().createUserWithEmailAndPassword(email, password)
                         .then(() => {
-                            alert("registered successfully, close app and reopen to log in");
+                            ToastAndroid.show("registration successful", ToastAndroid.LONG);
                         })
                         .catch (error=>{
                             if (String(error).includes('[auth/email-already-in-use]')) {

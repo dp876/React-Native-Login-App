@@ -10,7 +10,6 @@ import auth from '@react-native-firebase/auth';
 import { AuthContext } from '../authentication/AuthProvider';
 import { AuthProvider } from '../authentication/AuthProvider';
 import { SafeAreaConsumer } from 'react-native-safe-area-context';
-import { ToastProvider } from 'react-native-toast-notifications';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
 const Stack = createStackNavigator();
@@ -41,17 +40,22 @@ const Routes = () => {
     if (initializing) return null;
 
     return (
-        <ToastProvider>
-            <NavigationContainer>
-                <Stack.Navigator screenOptions={{ header: () => null }}>
-
-                    {user ? <Stack.Screen name="HomeScreen" component={HomeScreen} /> : <Stack.Screen name="SignIn" component={SignInScreen} /> }
-                    {/* <Stack.Screen name="SignIn" component={SignInScreen} /> */}
-                    <Stack.Screen name="SignUp" component={SignUpScreen} />
-                    {/* <Stack.Screen name="HomeScreen" component={HomeScreen} />  */}
-                </Stack.Navigator>
+        <NavigationContainer>
+            <Stack.Navigator screenOptions={{ header: () => null }}>
+                {
+                    user ? (
+                        <>
+                            <Stack.Screen name="HomeScreen" component={HomeScreen} />
+                        </>
+                    ) : (
+                        <>
+                            <Stack.Screen name="SignIn" component={SignInScreen} />
+                            <Stack.Screen name="SignUp" component={SignUpScreen} />
+                        </>
+                    )
+                }
+            </Stack.Navigator>
             </NavigationContainer>
-        </ToastProvider>
     );
 };
 
